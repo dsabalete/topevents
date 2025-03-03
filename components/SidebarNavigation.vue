@@ -6,13 +6,16 @@ const links = [
     { path: '/esdev2', text: 'Esdev. Gran 2' },
     { path: '/arxiu', text: 'Arxiu' },
     { path: '/tenda', text: 'Tenda' },
-
 ]
 
 const isCollapsed = ref(true)
 
 const toggleSidebar = () => {
     isCollapsed.value = !isCollapsed.value
+}
+
+const handleLinkClick = () => {
+    isCollapsed.value = true
 }
 </script>
 
@@ -28,7 +31,7 @@ const toggleSidebar = () => {
         <nav v-show="!isCollapsed">
             <ul class="list-none p-0 m-0">
                 <li v-for="(link, index) in links" :key="index" class="mb-2">
-                    <nuxt-link :to="link.path" class="sidebar-link" active-class="bg-gray-300">
+                    <nuxt-link :to="link.path" class="sidebar-link" active-class="bg-gray-300" @click="handleLinkClick">
                         {{ link.text }}
                     </nuxt-link>
                 </li>
