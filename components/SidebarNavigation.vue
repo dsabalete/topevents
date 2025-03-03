@@ -1,9 +1,12 @@
 <script lang="ts" setup>
 const links = [
-    { path: '/', text: 'Recent Events' },
-    { path: '/past', text: 'Past Events' },
-    { path: '/contact', text: 'Contact' },
-    { path: '/cookies', text: 'Cookies Policy' }
+    { path: '/futurs', text: 'Futurs esdev.' },
+    { path: '/agenda', text: 'Agenda' },
+    { path: '/esdev1', text: 'Esdev. Gran 1' },
+    { path: '/esdev2', text: 'Esdev. Gran 2' },
+    { path: '/arxiu', text: 'Arxiu' },
+    { path: '/tenda', text: 'Tenda' },
+
 ]
 
 const isCollapsed = ref(true)
@@ -15,9 +18,12 @@ const toggleSidebar = () => {
 
 <template>
     <aside class="sidebar" :class="{ 'sidebar--collapsed': isCollapsed }">
-        <button @click="toggleSidebar" class="collapse-btn">
-            <span v-if="isCollapsed">›</span>
-            <span v-else>‹</span>
+        <button @click="toggleSidebar" class="collapse-btn" :class="{ 'right-2 left-unset': !isCollapsed }">
+            <div v-if="isCollapsed" class="flex gap-2">
+                <IconBars class="w-10 h-10" />
+                <span class="text-3xl">LOGO</span>
+            </div>
+            <IconCancel v-else class="right-0" />
         </button>
         <nav v-show="!isCollapsed">
             <ul class="list-none p-0 m-0">
@@ -33,15 +39,21 @@ const toggleSidebar = () => {
 
 <style lang="postcss" scoped>
 .sidebar {
-    @apply w-48 bg-gray-200 pt-12 box-border relative transition-all duration-300;
+    @apply fixed top-0 left-0 h-full bg-gray-200 border-2 border-black pt-12 box-border transition-all duration-300;
+    width: 0;
+    /*overflow: hidden;*/
 
     &--collapsed {
-        @apply w-0;
+        width: 0;
     }
 
     &-link {
         @apply block text-gray-800 p-2 rounded hover:bg-gray-300;
     }
+}
+
+.sidebar:not(.sidebar--collapsed) {
+    width: 100%;
 }
 
 .collapse-btn {

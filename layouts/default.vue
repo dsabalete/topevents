@@ -1,11 +1,14 @@
 <template>
-    <div class="flex h-screen">
-        <SidebarNavigation />
-        <main class="flex-grow p-5 box-border">
-            <h1 class="text-3xl text-center">Topevents</h1>
-            <slot />
+    <div class="flex h-screen relative">
+        <main class="flex-grow box-border relative">
+            <SidebarNavigation class="absolute z-20" />
+            <slot class="abosolute" />
         </main>
     </div>
 </template>
 
-<style lang="postcss" scoped></style>
+<style lang="postcss" scoped>
+.title {
+    @apply text-black text-3xl text-center left-1/3 top-10 absolute z-20;
+}
+</style>
