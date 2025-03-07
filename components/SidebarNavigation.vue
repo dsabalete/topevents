@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const links = [
-    { path: '/futurs', text: 'Futurs esdev.' },
+    { path: '/', text: 'Futurs esdev.' },
     { path: '/agenda', text: 'Agenda' },
     { path: '/esdev1', text: 'Esdev. Gran 1' },
     { path: '/esdev2', text: 'Esdev. Gran 2' },
@@ -42,12 +42,12 @@ const handleLinkClick = () => {
 
 <style lang="postcss" scoped>
 .sidebar {
-    @apply fixed top-0 left-0 h-full bg-gray-200 border-2 border-black pt-12 box-border transition-all duration-300;
+    @apply fixed top-0 left-0 h-full bg-gray-200 border-black pt-12 box-border transition-all duration-300;
     width: 0;
     /*overflow: hidden;*/
 
     &--collapsed {
-        width: 0;
+        @apply w-0;
     }
 
     &-link {

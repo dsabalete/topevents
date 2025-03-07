@@ -5,7 +5,14 @@ export default {
     './components/**/*.{vue,js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontSize: {
+        xxs: '10px',
+      },
+      fontFamily: {
+        courier: ['Courier', 'Courier New', 'monospace'],
+      },
+    },
   },
   plugins: [],
 }
