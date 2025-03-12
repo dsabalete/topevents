@@ -1,7 +1,18 @@
+<script lang="ts" setup>
+const postersStore = usePostersStore()
+
+const handleSearch = (e: Event): void => {
+    e.preventDefault()
+    const target = e.target as HTMLInputElement
+    postersStore.setSearchQuery(target.value)
+}
+</script>
+
 <template>
     <div class="search-container">
-        <input type="text" v-model="searchQuery" @input="handleSearch" placeholder="Search..." class="search-input" />
-        <button class="search-button" @click="handleSearch">
+        <input type="text" v-model="postersStore.searchQuery" @input="handleSearch" placeholder="Search..."
+            class="search-input" />
+        <button class="search-button">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -11,32 +22,16 @@
     </div>
 </template>
 
-<script>
-export default {
-    name: 'SearchInput',
-    data() {
-        return {
-            searchQuery: ''
-        }
-    },
-    methods: {
-        handleSearch() {
-            this.$emit('search', this.searchQuery)
-        }
-    }
-}
-</script>
-
 <style lang="postcss" scoped>
 .search-container {
-    @apply flex p-2.5 ml-8;
+    @apply flex flex-row p-2.5 ml-[150px] md:max-w-[1200px] md:mx-auto md:pl-[600px] relative;
 }
 
 .search-input {
-    @apply p-2 border-b border-gray-300 rounded text-sm flex-grow font-courier;
+    @apply p-2 border-b border-gray-300 rounded text-sm flex-grow font-courier focus:outline-none;
 }
 
 .search-button {
-    @apply px-4 py-2 text-gray-400 border-0 rounded cursor-pointer;
+    @apply px-4 py-2 text-gray-400 border-0 rounded cursor-pointer absolute right-0;
 }
 </style>
