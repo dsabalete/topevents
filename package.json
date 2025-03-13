@@ -8,11 +8,18 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "server": "node ./server/server.cjs"
   },
   "dependencies": {
+    "@netlify/functions": "^3.0.1",
     "@nuxtjs/tailwindcss": "6.13.1",
     "@pinia/nuxt": "^0.10.1",
+    "axios": "^1.8.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.12.1",
     "nuxt": "^3.15.4",
     "pinia": "^3.0.1",
     "vue": "latest",
