@@ -1,6 +1,5 @@
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
-import axios from 'axios'
 import type { Poster } from '~/types/poster'
 
 
@@ -10,8 +9,8 @@ export const usePostersStore = defineStore('posters', () => {
 
     const fetchPosters = async () => {
         try {
-            const response = await axios.get('http://localhost:3001/api/posters')
-            posters.value = response.data
+            const response = await $fetch<Poster[]>('/.netlify/functions/api')
+            posters.value = response
 
             console.log('Fetched posters:', posters.value)
 

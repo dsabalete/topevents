@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 const posters = usePostersStore()
-posters.fetchPosters()
+onMounted(() => {
+    posters.fetchPosters()
+})
 </script>
 
 <template>
