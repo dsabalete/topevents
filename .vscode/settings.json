@@ -1,0 +1,17 @@
+{
+    "tailwindCSS.includeLanguages": {
+        "plaintext": "html",
+        "vue": "html",
+        "javascript": "javascript",
+        "typescript": "typescript",
+        "javascriptreact": "javascript",
+        "typescriptreact": "typescript"
+    },
+    "editor.quickSuggestions": {
+        "strings": true
+    },
+    "tailwindCSS.emmetCompletions": true,
+    "files.associations": {
+        "*.css": "tailwindcss"
+    }
+}
