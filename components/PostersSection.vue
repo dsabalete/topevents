@@ -1,15 +1,23 @@
 <script lang="ts" setup>
-const posters = usePostersStore()
+const { posters, fetchPosters } = useSupabasePosters()
+const { query } = storeToRefs(useFilterStore())
+
+const filteredPosters = computed(() => {
+    return posters.value.filter(poster =>
+        poster.name.toLowerCase().includes(query.value.toLowerCase())
+    )
+})
+
 onMounted(() => {
-    posters.fetchPosters()
+    fetchPosters()
 })
 </script>
 
 <template>
     <div class="grid grid-cols-2 gap-3 p-3 max-w-[1200px] mx-auto">
-        <div v-for="poster in posters.filteredPosters" :key="poster.id" class="poster">
-            <a :href="poster.link" target="_blank">
-                <img :src="poster.image" :alt="poster.name" class="w-full h-auto" />
+        <div v-for="event in filteredPosters" :key="event.id" class="event">
+            <a :href="event.link" target="_blank">
+                <img :src="event.image" :alt="event.name" class="w-full h-auto" />
             </a>
         </div>
     </div>

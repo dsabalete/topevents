@@ -1,17 +1,14 @@
 <script lang="ts" setup>
-const postersStore = usePostersStore()
-
 const handleSearch = (e: Event): void => {
     e.preventDefault()
     const target = e.target as HTMLInputElement
-    postersStore.setSearchQuery(target.value)
+    useFilterStore().setQuery(target.value)
 }
 </script>
 
 <template>
     <div class="search-container">
-        <input type="text" v-model="postersStore.searchQuery" @input="handleSearch" placeholder="Search..."
-            class="search-input" />
+        <input type="text" v-model="query" @input="handleSearch" placeholder="Search..." class="search-input" />
         <button class="search-button">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">

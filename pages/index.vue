@@ -5,9 +5,6 @@
                 <source src="assets/video/mockup.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <!-- <div class="relative z-10 flex items-center justify-center w-full h-full">
-                <h1 class="text-white text-4xl font-bold">Your Content Here</h1>
-            </div> -->
         </div>
 
         <div class="credits">
