@@ -15,7 +15,7 @@
 
         <PostersSection />
 
-        <div class="arxiu-link h-60">
+        <div class="arxiu-link ">
             <NuxtLink to="/arxiu">Arxiu</NuxtLink>
         </div>
 
@@ -28,6 +28,6 @@
 }
 
 .arxiu-link {
-    @apply text-lg text-black text-center my-10;
+    @apply h-10 my-10 text-lg text-black text-center;
 }
 </style>

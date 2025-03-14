@@ -11,6 +11,7 @@ onMounted(() => {
         <main class="flex-grow box-border relative">
             <SidebarNavigation class="absolute z-20" />
             <slot class="absolute" />
+            <GeneralFooter />
         </main>
     </div>
 </template>

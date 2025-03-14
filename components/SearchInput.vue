@@ -23,7 +23,7 @@ const handleSearch = (e: Event): void => {
 
 <style lang="postcss" scoped>
 .search-container {
-    @apply flex flex-row p-2.5 ml-[150px] md:max-w-[1200px] md:mx-auto md:pl-[600px] relative;
+    @apply flex flex-row p-2.5 ml-[150px] md:max-w-5xl md:mx-auto md:pl-[600px] relative;
 }
 
 .search-input {
