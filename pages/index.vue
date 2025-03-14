@@ -23,10 +23,6 @@
 </template>
 
 <style lang="postcss" scoped>
-.index-page {
-    @apply font-courier;
-}
-
 .credits {
     @apply text-xxs px-2 pt-1 mb-4;
 }

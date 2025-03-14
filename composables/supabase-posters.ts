@@ -7,18 +7,15 @@ export const useSupabasePosters = () => {
     const supabaseUrl = config.public.supabaseUrl
     const supabase = createClient(supabaseUrl, supabaseKey)
 
-    const { setEvents } = useEventsStore()
-
-    const fetchPosters = async (archived = false) => {
+    const fetchPosters = async () => {
         try {
             const { data, error } = await supabase
                 .from('events')
                 .select('*')
-                .eq('archived', archived)
 
             if (error) throw error
 
-            setEvents(data as PosterEvent[])
+            useEventsStore().setEvents(data as PosterEvent[])
         } catch (error) {
             console.error('Error fetching events:', error)
         }

@@ -7,10 +7,18 @@ export const useEventsStore = defineStore('events', () => {
 
     const events = ref<PosterEvent[]>([])
 
+    const publishedPosters = computed(() => {
+        return events.value.filter(poster => !poster.archived)
+    })
+
     const filteredPosters = computed(() => {
-        return events.value.filter(poster =>
+        return publishedPosters.value.filter(poster =>
             poster.name.toLowerCase().includes(query.value.toLowerCase())
         )
+    })
+
+    const archivedPosters = computed(() => {
+        return events.value.filter(poster => poster.archived)
     })
 
     const setEvents = (newEvents: PosterEvent[]) => {
@@ -20,6 +28,7 @@ export const useEventsStore = defineStore('events', () => {
     return {
         events,
         filteredPosters,
+        archivedPosters,
         setEvents
     }
 })

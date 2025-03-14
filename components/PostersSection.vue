@@ -1,10 +1,5 @@
 <script lang="ts" setup>
-const { fetchPosters } = useSupabasePosters()
 const { filteredPosters } = storeToRefs(useEventsStore())
-
-onMounted(() => {
-    fetchPosters()
-})
 </script>
 
 <template>

@@ -3,4 +3,5 @@ export interface PosterEvent {
     name: string;
     image: string;
     link: string;
+    archived: boolean;
 }

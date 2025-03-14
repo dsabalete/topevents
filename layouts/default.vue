@@ -1,8 +1,16 @@
+<script lang="ts" setup>
+const { fetchPosters } = useSupabasePosters()
+
+onMounted(() => {
+    fetchPosters()
+})
+</script>
+
 <template>
     <div class="flex h-screen relative">
         <main class="flex-grow box-border relative">
             <SidebarNavigation class="absolute z-20" />
-            <slot class="abosolute" />
+            <slot class="absolute" />
         </main>
     </div>
 </template>
