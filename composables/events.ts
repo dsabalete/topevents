@@ -16,6 +16,7 @@ export const useSupabasePosters = () => {
             const { data, error } = await supabase
                 .from('events')
                 .select('*')
+                .eq('archived', false)
 
             if (error) throw error
 
