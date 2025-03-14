@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+const { query } = storeToRefs(useFilterStore())
+
 const handleSearch = (e: Event): void => {
     e.preventDefault()
     const target = e.target as HTMLInputElement

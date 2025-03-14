@@ -1,12 +1,6 @@
 <script lang="ts" setup>
-const { posters, fetchPosters } = useSupabasePosters()
-const { query } = storeToRefs(useFilterStore())
-
-const filteredPosters = computed(() => {
-    return posters.value.filter(poster =>
-        poster.name.toLowerCase().includes(query.value.toLowerCase())
-    )
-})
+const { fetchPosters } = useSupabasePosters()
+const { filteredPosters } = storeToRefs(useEventsStore())
 
 onMounted(() => {
     fetchPosters()
