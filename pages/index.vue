@@ -13,6 +13,7 @@
 
         <SearchInput />
 
+        <a id="espais"></a>
         <PostersSection />
 
         <div class="arxiu-link ">
