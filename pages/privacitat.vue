@@ -1,5 +1,5 @@
 <template>
-    <div class="privacitat">
+    <div class="privacitat-page">
         <h2>Política de Privacitat</h2>
         <p>
             La teva privacitat és important per a nosaltres. Aquesta política de privacitat explica com recollim,
@@ -72,8 +72,8 @@
 </template>
 
 <style lang="postcss" scoped>
-.privacitat {
-    @apply max-w-5xl mx-auto p-5;
+.privacitat-page {
+    @apply max-w-4xl mx-auto pt-10 md:pt-20;
 
     h2 {
         @apply text-2xl font-bold pt-8 pb-4;

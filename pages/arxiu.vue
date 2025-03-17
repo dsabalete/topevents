@@ -21,7 +21,7 @@ const { archivedPosters } = storeToRefs(useEventsStore())
 
 <style lang="postcss" scoped>
 .arxiu-page {
-    @apply max-w-[800px] mx-auto;
+    @apply max-w-4xl mx-auto mt-20;
 
     h1 {
         @apply text-4xl font-bold text-center mb-8;

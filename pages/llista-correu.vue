@@ -26,7 +26,7 @@ const subscribe = (e) => {
 
 <style lang="postcss" scoped>
 .llista-correu-page {
-    @apply max-w-[800px] mx-auto pt-10 md:pt-20;
+    @apply max-w-4xl mx-auto pt-10 md:pt-20;
 
     &__form {
         @apply flex flex-col;
