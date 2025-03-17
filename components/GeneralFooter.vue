@@ -3,10 +3,10 @@
         <div class="footer-links">
             <ul>
                 <li>
-                    <NuxtLink to="/tercer-espai">Tercer Espai</NuxtLink>
+                    <NuxtLink to="/">Tercer Espai</NuxtLink>
                 </li>
                 <li>
-                    <NuxtLink to="/espais">Espais</NuxtLink>
+                    <NuxtLink to="/#espais">Espais</NuxtLink>
                 </li>
                 <li>
                     <NuxtLink to="/contingut">Contingut</NuxtLink>
@@ -25,7 +25,7 @@
             </ul>
             <ul>
                 <li>
-                    <NuxtLink to="/twitter">FAQ</NuxtLink>
+                    <NuxtLink to="/faq">FAQ</NuxtLink>
                 </li>
                 <li>
                     <NuxtLink to="/llista-correu">Llista de correu</NuxtLink>
@@ -34,7 +34,7 @@
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2025 Pixapins Enterprises. All rights reserved.</p>
+            <p>&copy; 2025 Produccions Pixapins. Tots els drets reservats.</p>
         </div>
     </footer>
 </template>
