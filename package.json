@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.13.2",
-    "@pinia/nuxt": "^0.10.1"
+    "@pinia/nuxt": "^0.10.1",
+    "netlify-cli": "^19.0.2"
   }
 }
