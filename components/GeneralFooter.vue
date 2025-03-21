@@ -6,7 +6,7 @@
                     <NuxtLink to="/">Tercer Espai</NuxtLink>
                 </li>
                 <li>
-                    <NuxtLink to="/#espais">Espais</NuxtLink>
+                    <NuxtLink to="/espais">Espais</NuxtLink>
                 </li>
                 <li>
                     <NuxtLink to="/contingut">Contingut</NuxtLink>
@@ -42,16 +42,18 @@
 <style lang="postcss" scoped>
 /* Footer.css */
 .footer {
-    @apply max-w-5xl mx-10 md:mx-auto py-10 text-[#333];
+    @apply max-w-5xl md:mx-auto p-5 text-[#333];
 
     &-links {
-        @apply flex flex-col md:flex-row justify-between mb-5;
+        @apply flex flex-row justify-between md:mb-5;
+
+        a {
+            @apply text-xs md:text-sm hover:bg-gray-600 hover:text-white;
+        }
     }
-}
 
-
-
-.footer-bottom {
-    @apply text-center mt-10 pt-5 border-t border-[#ddd];
+    &-bottom {
+        @apply text-center mt-5 md:mt-10 pt-5 border-t border-[#ddd];
+    }
 }
 </style>
