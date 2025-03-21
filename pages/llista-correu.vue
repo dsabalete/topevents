@@ -29,7 +29,7 @@ const subscribe = (e) => {
 
 <style lang="postcss" scoped>
 .llista-correu-page {
-    @apply max-w-4xl mx-auto mt-20 p-5 h-[75%];
+    @apply max-w-4xl mx-auto mt-20 p-5 h-3/5;
 
     h2 {
         @apply pb-2;

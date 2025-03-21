@@ -1,14 +1,12 @@
 <template>
-    <div class="page-agenda">
-        <h2>Agenda</h2>
+    <div class="page-espais">
+        <h2>Espais</h2>
 
-        <p> Viewing party of Alex's Sabalete BCN documnetal
-        </p>
     </div>
 </template>
 
 <style lang="postcss" scoped>
-.page-agenda {
+.page-espais {
     @apply max-w-4xl mx-auto mt-20 p-5 h-3/5;
 
     h2 {

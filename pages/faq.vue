@@ -18,7 +18,7 @@ const faqItems = [
 
 <style lang="postcss" scoped>
 .faq-page {
-    @apply max-w-4xl mx-auto mt-20 p-5;
+    @apply max-w-4xl mx-auto mt-20 p-5 h-3/5;
 
     h2 {
         @apply pb-2;

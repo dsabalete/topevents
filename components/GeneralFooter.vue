@@ -1,6 +1,6 @@
 <template>
     <footer class="footer">
-        <div class="footer-links">
+        <div class="footer__links">
             <ul>
                 <li>
                     <NuxtLink to="/">Tercer Espai</NuxtLink>
@@ -33,7 +33,7 @@
             </ul>
         </div>
 
-        <div class="footer-bottom">
+        <div class="footer__bottom">
             <p>&copy; 2025 Produccions Pixapins. Tots els drets reservats.</p>
         </div>
     </footer>
@@ -44,7 +44,7 @@
 .footer {
     @apply max-w-5xl md:mx-auto p-5 text-[#333];
 
-    &-links {
+    &__links {
         @apply flex flex-row justify-between md:mb-5;
 
         a {
@@ -52,7 +52,7 @@
         }
     }
 
-    &-bottom {
+    &__bottom {
         @apply text-center mt-5 md:mt-10 pt-5 border-t border-[#ddd];
     }
 }
