@@ -1,8 +1,20 @@
 <script lang="ts" setup>
-const subscribe = (e) => {
-    e.preventDefault()
-    const email = e.target.elements.email.value
-    alert('Gracies per la teva subscripció!\n' + email)
+const email = ref('')
+
+const handleSubmit = (e: Event) => {
+    const form = e.target as HTMLFormElement
+    const formData = new FormData(form)
+
+    fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString()
+    })
+        .then(() => {
+            alert('Gracies per la teva subscripció!\n' + email.value)
+            email.value = ''
+        })
+        .catch(error => alert(error))
 }
 </script>
 
@@ -16,14 +28,21 @@ const subscribe = (e) => {
         <!-- Formulari de subscripció       
         example:
         https://andrewstiefel.com/netlify-functions-email-subscription/ 
+        @submit.prevent="subscribe"
         -->
-        <form @submit="subscribe" class="llista-correu-page__form">
+        <form @submit.prevent="handleSubmit" method="POST" class="llista-correu-page__form" name="mailing-list"
+            data-netlify="true" data-netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="mailing-list" />
+            <p class="hidden">
+                <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+            </p>
             <label for="email">Insereix el teu correu electrònic:</label>
             <div class="flex flex-row my-1">
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" v-model="email" name="email" required>
                 <button type="submit">Subscriu-te</button>
             </div>
         </form>
+        <p class="text-xs">*Pots donar-te de baixa de la nostra llista de correu a qualsevol moment.</p>
     </div>
 </template>
 
