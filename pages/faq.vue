@@ -18,10 +18,10 @@ const faqItems = [
 
 <style lang="postcss" scoped>
 .faq-page {
-    @apply max-w-4xl mx-auto mt-20;
+    @apply max-w-4xl mx-auto mt-20 p-5;
 
     h2 {
-        @apply text-2xl font-bold mb-10;
+        @apply pb-2;
     }
 }
 </style>
