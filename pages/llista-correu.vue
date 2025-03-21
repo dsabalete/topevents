@@ -8,6 +8,9 @@ const subscribe = (e) => {
 
 <template>
     <div class="llista-correu-page">
+
+        <h2>Llista de correu</h2>
+
         <p class="mb-10">Per estar al dia de les nostres novetats, inscriu-te a la nostra llista de correu.</p>
 
         <!-- Formulari de subscripció       
@@ -16,7 +19,7 @@ const subscribe = (e) => {
         -->
         <form @submit="subscribe" class="llista-correu-page__form">
             <label for="email">Insereix el teu correu electrònic:</label>
-            <div class="flex flex-row">
+            <div class="flex flex-row my-1">
                 <input type="email" id="email" name="email" required>
                 <button type="submit">Subscriu-te</button>
             </div>
@@ -26,7 +29,11 @@ const subscribe = (e) => {
 
 <style lang="postcss" scoped>
 .llista-correu-page {
-    @apply max-w-4xl mx-auto pt-10 md:pt-20;
+    @apply max-w-4xl mx-auto mt-20 p-5 h-[75%];
+
+    h2 {
+        @apply pb-2;
+    }
 
     &__form {
         @apply flex flex-col;
