@@ -76,11 +76,11 @@
     @apply max-w-4xl mx-auto pt-10 md:pt-20;
 
     h2 {
-        @apply text-2xl font-bold pt-8 pb-4;
+        @apply font-bold pt-8 pb-4;
     }
 
     h3 {
-        @apply text-xl font-semibold pt-4 pb-2;
+        @apply font-semibold pt-4 pb-2;
     }
 
     ul {
