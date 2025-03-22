@@ -1,48 +1,31 @@
 <script lang="ts" setup>
 const email = ref('')
+const { subscribe, error, subscribed } = useSupabaseMailingList()
 
-const handleSubmit = (e: Event) => {
-    const form = e.target as HTMLFormElement
-    const formData = new FormData(form)
-
-    fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData as any).toString()
-    })
-        .then(() => {
-            alert('Gracies per la teva subscripció!\n' + email.value)
-            email.value = ''
-        })
-        .catch(error => alert(error))
+const handleSubmit = async () => {
+    await subscribe(email.value)
 }
 </script>
 
 <template>
     <div class="llista-correu-page">
-
         <h2>Llista de correu</h2>
 
-        <p class="mb-10">Per estar al dia de les nostres novetats, inscriu-te a la nostra llista de correu.</p>
+        <template v-if="!subscribed">
+            <p class="mb-10">Per estar al dia de les nostres novetats, inscriu-te a la nostra llista de correu.</p>
+            <form @submit.prevent="handleSubmit" class="llista-correu-page__form">
+                <label for="email">Insereix el teu correu electrònic:</label>
+                <div class="flex flex-row my-1">
+                    <input type="email" id="email" v-model="email" name="email" required>
+                    <button type="submit">Subscriu-te</button>
+                </div>
+            </form>
+            <p class="text-xs">*Pots donar-te de baixa de la nostra llista de correu a qualsevol moment.</p>
+        </template>
 
-        <!-- Formulari de subscripció       
-        example:
-        https://andrewstiefel.com/netlify-functions-email-subscription/ 
-        @submit.prevent="subscribe"
-        -->
-        <form @submit.prevent="handleSubmit" method="POST" class="llista-correu-page__form" name="mailing-list"
-            data-netlify="true" data-netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="mailing-list" />
-            <p class="hidden">
-                <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-            </p>
-            <label for="email">Insereix el teu correu electrònic:</label>
-            <div class="flex flex-row my-1">
-                <input type="email" id="email" v-model="email" name="email" required>
-                <button type="submit">Subscriu-te</button>
-            </div>
-        </form>
-        <p class="text-xs">*Pots donar-te de baixa de la nostra llista de correu a qualsevol moment.</p>
+        <p v-if="subscribed">T'has subscrits correctament a la nostra llista de correu.</p>
+
+        <p v-if="error" class="error">{{ error }}</p>
     </div>
 </template>
 
@@ -64,6 +47,10 @@ const handleSubmit = (e: Event) => {
         button[type="submit"] {
             @apply w-60 px-4 bg-gray-600 text-white rounded cursor-pointer;
         }
+    }
+
+    .error {
+        @apply text-red-500 my-5;
     }
 }
 </style>

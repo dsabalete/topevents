@@ -6,7 +6,7 @@
     "build": "nuxt build",
     "clean": "nuxt cleanup && bun reset && bun dev",
     "reset": "rm -rf node_modules bun.lock && bun install",
-    "dev": "netlify dev",
+    "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
