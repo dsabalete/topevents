@@ -1,11 +1,7 @@
-import { createClient } from '@supabase/supabase-js'
 import type { PosterEvent } from '~/types/poster-event'
 
 export const useSupabasePosters = () => {
-    const config = useRuntimeConfig()
-    const supabaseKey = config.public.supabaseKey
-    const supabaseUrl = config.public.supabaseUrl
-    const supabase = createClient(supabaseUrl, supabaseKey)
+    const { supabase } = useSupabaseClient()
 
     const fetchPosters = async () => {
         try {

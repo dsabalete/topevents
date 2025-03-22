@@ -1,1 +1,7 @@
-targetPort = 3000
+[build]
+  command = "bun run build"
+  publish = "dist"
+
+[dev]
+  targetPort = 3000
+  port = 8888
