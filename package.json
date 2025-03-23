@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "clean": "nuxt cleanup && bun reset && bun dev",
+    "clean": "nuxt cleanup",
     "reset": "rm -rf node_modules bun.lock && bun install",
     "dev": "netlify dev",
     "generate": "nuxt generate",
