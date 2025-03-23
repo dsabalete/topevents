@@ -73,7 +73,7 @@
 
 <style lang="postcss" scoped>
 .privacitat-page {
-    @apply max-w-4xl mx-auto pt-10 md:pt-20;
+    @apply max-w-4xl mx-auto pt-10 md:pt-20 p-5;
 
     h2 {
         @apply font-bold pt-8 pb-4;

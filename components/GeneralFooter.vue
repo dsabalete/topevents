@@ -42,7 +42,7 @@
 <style lang="postcss" scoped>
 /* Footer.css */
 .footer {
-    @apply max-w-5xl md:mx-auto p-5 text-[#333];
+    @apply max-w-5xl md:mx-auto mt-20 p-5 text-[#333];
 
     &__links {
         @apply flex flex-row justify-between md:mb-5;
