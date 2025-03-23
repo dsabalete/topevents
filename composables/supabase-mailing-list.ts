@@ -1,5 +1,3 @@
-
-
 export const useSupabaseMailingList = () => {
     const { supabase } = useSupabaseClient()
     const error = ref<string | null>(null)
