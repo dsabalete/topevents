@@ -1,8 +1,10 @@
 <script lang="ts" setup>
 const { fetchPosters } = useSupabasePosters()
+const { fetchEspais } = useSupabaseEspais()
 
 onMounted(() => {
     fetchPosters()
+    fetchEspais()
 })
 </script>
 

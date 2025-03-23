@@ -1,46 +1,5 @@
 <script lang="ts" setup>
-const espais = [
-    {
-        name: 'FIMA BARCELONA',
-        address: 'Carrer de Melcior de Palau, 140, Sants - Montjuïc, 08014 Barcelona',
-        timetable: [
-            'Obert 8 - 21 (DL - DV)',
-            'Tancat (DS - DG)'
-        ],
-        phone: '93403577',
-        picture: 'https://www.ub.edu/portal/c/document_library/get_file?groupId=5181723&uuid=7c6ddcae-a84b-810b-b44b-9c5d3be94853',
-    },
-    {
-        name: 'ESPAI 2',
-        address: 'Pendent de confirmar',
-        timetable: [
-            'Obert 8 - 21 (DL - DV)',
-            'Tancat (DS - DG)'
-        ],
-        phone: '999999999',
-        picture: 'https://placehold.co/200',
-    },
-    {
-        name: 'ESPAI 3',
-        address: 'Pendent de confirmar',
-        timetable: [
-            'Obert 8 - 21 (DL - DV)',
-            'Tancat (DS - DG)'
-        ],
-        phone: '999999999',
-        picture: 'https://placehold.co/200',
-    },
-    {
-        name: 'ESPAI 4',
-        address: 'Pendent de confirmar',
-        timetable: [
-            'Obert 8 - 21 (DL - DV)',
-            'Tancat (DS - DG)'
-        ],
-        phone: '999999999',
-        picture: 'https://placehold.co/200',
-    }
-]
+const { espais } = useEspaisStore()
 </script>
 
 <template>

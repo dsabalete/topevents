@@ -9,7 +9,7 @@ const { espai } = defineProps(['espai'])
             <h3 class="text-lg font-bold mb-3">{{ espai.name }}</h3>
             <p class="text-sm mb-2">{{ espai.address }}</p>
             <p class="text-sm mb-2">{{ espai.phone }}</p>
-            <p class="text-sm" v-for="horari in espai.timetable" :key="horari">{{ horari }}</p>
+            <p class="text-sm">{{ espai.timetable }}</p>
         </div>
     </div>
 </template>
