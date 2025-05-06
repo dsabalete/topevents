@@ -10,7 +10,7 @@ export default {
         xxs: '10px',
       },
       fontFamily: {
-        courier: ['Courier', 'Courier New', 'monospace'],
+        mono: ['"Courier Prime"', 'monospace'],
       },
     },
   },

@@ -34,14 +34,14 @@ const handleSubmit = async () => {
     @apply max-w-4xl mx-auto mt-20 p-5;
 
     h2 {
-        @apply pb-2;
+        @apply font-bold text-center mb-8;
     }
 
     &__form {
         @apply flex flex-col;
 
         input[type="email"] {
-            @apply w-full px-4 py-2 border border-gray-300 rounded text-sm flex-grow font-courier focus:outline-none;
+            @apply w-full px-4 py-2 border border-gray-300 rounded text-sm flex-grow font-mono focus:outline-none;
         }
 
         button[type="submit"] {

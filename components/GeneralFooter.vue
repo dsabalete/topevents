@@ -3,7 +3,7 @@
         <div class="footer__links">
             <ul>
                 <li>
-                    <NuxtLink to="/">Tercer Espai</NuxtLink>
+                    <NuxtLink to="/nosaltres">Nosaltres</NuxtLink>
                 </li>
                 <li>
                     <NuxtLink to="/espais">Espais</NuxtLink>

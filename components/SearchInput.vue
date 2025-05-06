@@ -27,7 +27,7 @@ const handleSearch = (e: Event): void => {
 }
 
 .search-input {
-    @apply p-2 border-b border-gray-300 rounded text-sm flex-grow font-courier focus:outline-none;
+    @apply p-2 border-b border-gray-300 rounded text-sm flex-grow font-mono focus:outline-none;
 }
 
 .search-button {

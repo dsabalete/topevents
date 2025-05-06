@@ -21,7 +21,7 @@ const faqItems = [
     @apply max-w-4xl mx-auto mt-20 p-5;
 
     h2 {
-        @apply pb-2;
+        @apply font-bold text-center mb-8;
     }
 }
 </style>

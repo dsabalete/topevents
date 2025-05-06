@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 const links = [
-    { path: '/', text: 'Futurs esdev.' },
+    { path: '/', text: 'Inici' },
     { path: '/agenda', text: 'Agenda' },
-    { path: '/esdev1', text: 'Esdev. Gran 1' },
-    { path: '/esdev2', text: 'Esdev. Gran 2' },
+    { path: '/events/1', text: 'Esdev. Gran 1' },
+    { path: '/events/2', text: 'Esdev. Gran 2' },
     { path: '/arxiu', text: 'Arxiu' },
     { path: '/tenda', text: 'Tenda' },
 ]

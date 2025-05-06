@@ -3,11 +3,11 @@ const { archivedPosters } = storeToRefs(useEventsStore())
 </script>
 
 <template>
-    <div class="arxiu-page">
+    <div class="page-arxiu">
 
         <h2>Arxiu</h2>
 
-        <div class="arxiu-page__grid">
+        <div class="page-arxiu__grid">
             <div v-for="event in archivedPosters" :key="event.id" class="event">
                 <a :href="event.link" target="_blank">
                     <img :src="event.image" :alt="event.name" class="w-full h-auto" />
@@ -19,7 +19,7 @@ const { archivedPosters } = storeToRefs(useEventsStore())
 </template>
 
 <style lang="postcss" scoped>
-.arxiu-page {
+.page-arxiu {
     @apply max-w-4xl mx-auto mt-20;
 
     h2 {

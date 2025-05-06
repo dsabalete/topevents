@@ -2,7 +2,7 @@
     <div class="page-agenda">
         <h2>Agenda</h2>
 
-        <p> Viewing party of Alex's Sabalete BCN documnetal
+        <p> Viewing party of Alex's Sabalete BCN documental
         </p>
     </div>
 </template>
@@ -12,7 +12,7 @@
     @apply max-w-4xl mx-auto mt-20 p-5;
 
     h2 {
-        @apply pb-2;
+        @apply font-bold text-center mb-8;
     }
 }
 </style>

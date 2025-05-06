@@ -21,7 +21,7 @@ const { espais } = useEspaisStore()
     }
 
     h2 {
-        @apply mb-8;
+        @apply font-bold text-center mb-8;
     }
 }
 </style>

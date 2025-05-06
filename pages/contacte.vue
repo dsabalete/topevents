@@ -51,7 +51,7 @@ const handleSubmit = async () => {
     @apply max-w-4xl mx-auto mt-20 p-5;
 
     h2 {
-        @apply pb-5;
+        @apply font-bold text-center mb-8;
     }
 
     .contact-form {
