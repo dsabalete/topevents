@@ -10,8 +10,7 @@
     "netlify:dev": "netlify dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "server": "node ./server/server.cjs"
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
     "@netlify/functions": "^3.0.1",
