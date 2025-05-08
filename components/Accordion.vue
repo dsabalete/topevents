@@ -30,14 +30,14 @@ const toggle = (index: number) => {
 
 <style lang="postcss" scoped>
 .accordion-item {
-    border-bottom: 1px solid #ddd;
+    @apply border-b border-[#ddd] last:border-b-0;
 }
 
 .accordion-header {
-    @apply w-full text-left py-2 px-4 bg-gray-100 cursor-pointer;
+    @apply w-full font-bold uppercase text-left p-4 bg-gray-100 cursor-pointer;
 }
 
 .accordion-content {
-    @apply py-2 px-4;
+    @apply mx-4 mt-6 mb-8;
 }
 </style>
