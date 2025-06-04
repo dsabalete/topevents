@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 body {
-  @apply font-mono;
+  @apply font-mono bg-gray-100;
 }
 
 h1 {

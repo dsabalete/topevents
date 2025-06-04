@@ -23,10 +23,11 @@ const handleLinkClick = () => {
     <aside class="sidebar" :class="{ 'sidebar--collapsed': isCollapsed }">
 
         <div v-if="isCollapsed" class="sidebar-logo">
-            <img src="~/assets/img/tercer_espai.png" alt="logo" width="100%" height="100%" />
+            <img src="~/assets/img/3e_white.png" alt="logo" />
         </div>
 
-        <button @click="toggleSidebar" class="collapse-btn" :class="{ 'right-2 left-unset': !isCollapsed }">
+        <button @click="toggleSidebar" class="collapse-btn"
+            :class="{ 'right-2 left-unset not-collapsed': !isCollapsed }">
             <div v-if="isCollapsed" class="flex gap-2 relative">
                 <IconBars class="w-10 h-10" />
             </div>
@@ -47,10 +48,14 @@ const handleLinkClick = () => {
 
 <style lang="postcss" scoped>
 .sidebar {
-    @apply fixed top-0 left-0 bg-gray-200 border-black pt-12 box-border transition-all duration-300;
+    @apply fixed top-0 left-0 bg-white border-black pt-12 box-border transition-all duration-300;
 
     &-logo {
         @apply absolute w-40 left-12 -top-2 z-40;
+
+        img {
+            @apply w-20 h-auto mt-2 ml-4;
+        }
     }
 
     &-link {
@@ -71,6 +76,10 @@ const handleLinkClick = () => {
 }
 
 .collapse-btn {
-    @apply absolute left-2 top-2 px-2 py-1 text-black hover:text-gray-400 z-10;
+    @apply absolute left-2 top-2 px-2 py-1 text-white hover:text-gray-400 z-10;
+
+    &.not-collapsed {
+        @apply text-black;
+    }
 }
 </style>
