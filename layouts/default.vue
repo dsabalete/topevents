@@ -20,6 +20,6 @@ onMounted(() => {
 
 <style lang="postcss" scoped>
 .default-layout {
-    @apply flex h-screen relative;
+    @apply flex h-screen relative bg-gray-100;
 }
 </style>
